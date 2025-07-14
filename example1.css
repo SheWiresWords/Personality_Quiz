@@ -1,0 +1,33 @@
+/* Let's Style in CSS */
+button{
+    align-items:center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius:50px;
+    background-color:rgb(255, 212, 212);
+    border: 2px solid rgb(255, 122, 122);
+    font-family: monospace
+    
+}
+
+button:hover{
+    transform: translateY(-2px);
+    box-shadow: 1px 1px 2px 2px rgb(255, 127, 127) ;
+}
+
+.button{
+    display: block;
+    text-align:center;
+}
+
+a{
+    text-decoration:none;
+    color:black;
+}
+
+.code{
+    background-color:gray;
+    border-radius:25px;
+    padding:1rem;
+}
+
