@@ -1,57 +1,84 @@
-<!doctype html> <!-- This tells browser the site will be written in HTML-->
+<!DOCTYPE html>
+<html lang="en">
 
-<html lang="en-US"> <!-- Wraps around all the code. Known as root element. Includes the language of the document-->
+<head>
+	<title>Personality Quiz Starter Code</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <head> <!-- Everything about the HTML document you DON'T want to show the viewer-->
+	<!-- import the webpage's stylesheet -->
+	<link rel="stylesheet" href="/style.css">
 
+	<!-- import the webpage's javascript file -->
+	<script src="/script.js" defer>
 
-    <meta charset="utf-8" /> <!-- Sets standard accepted characters-->
+	</script>
+</head>
+
+<body>
+
+	<header>
+		<h1>Alexa's Personality Quiz</h1>
+		<p>Learn what coding language you are by picking which item you prefer!</p>
+	</header>
+
+	<main>
+
+		<h2>Coffee or Tea?</h2>
+		<div class="question">
+
+			<div class="answer-choice">
+				<img src="assets/cup-7502891.svg" alt="A red coffee cup containing dark brown drip coffee ">
+        <br>
+        <button id="q1a1">Coffee</button>
+      </div>
+
+      <div class="answer-choice">
+        <img src="assets/tea-153336.svg" alt="A white teacup with green tea and a side of sugar cubes.">
+        <br>
+        <button id="q1a2">Tea</button>
+      </div>
+
+    </div> 
+    
+    <h2>Cats or Dogs?</h2>
+    <div class="question">
+
+      <div class="answer-choice">
+        <img src="assets/cat-4495094.svg" alt="A pink and purple cat walking towards you with hearts around it.">
+        <br>
+        <button id="q2a1">Cats</button>
+      </div>
+
+      <div class="answer-choice">
+        <img src="assets/maltese-7901451.svg" alt="A Maltese puppy with white sunglasses on, sitting on a sunny beach.">
+        <br>
+        <button id="q2a2">Dogs</button>
+      </div>
+
+    </div> 
+    
+    <h2>Cookies or Cupcakes?</h2>
+    <div class="question">
+
+      <div class="answer-choice">
+        <img src="assets/ai-generated-9584638.svg" alt="A large, crumbly chocolate chip cookie atop a wooden plate">
+        <br>
+        <button id="q3a1">Cookies</button>
+      </div>
+
+      <div class="answer-choice">
+        <img src="assets/ai-generated-9584655.svg" alt="A vanilla cupcake with vanilla buttercream, topped with a raspberry.">
+        <br>
+        <button id="q3a2">Cupcakes</button>
+      </div>
+
+    </div> 
+    
+    <h2 id="result">Your result is...</h2>
     
     
-    <meta name="viewport" content="width=device-width" /> <!-- Makes sure the site can adjust to diff size devices-->
-    
-    
-    <link href="example1.css" rel="stylesheet" type="text/css" /> <!-- Links to CSS file-->
-
-    
-    <title>Personality Quiz</title> <!-- What shows up on a broswer search -->
-    
-  
-  </head>
- 
-  <body> <!-- Main content of the site-->
-    
-    <div class="topdiv">
-          <h1>
-      Let's learn web designing basics.
-    </h1>
-
-    <p> This is a paragraph. How am I writing these paragraphs? </p>
-    <h5> This is h5, the 5th largest header available in the HTML
-      language. HTML stands for hypertext markup language. 
-    </h5>
-
-    <code>
-      I'm making these changes using
-      tags. Tags look like: < >
-    </code>
- 
-    <h1 id="headerID1">
-      This is the same kind of <b>header</b> 
-      as the first title. But, we used an ID to
-      make the font and color unique.
-    </h1>
-    <code>
-      < h1 > Your text goes here < /h1 >
-    
-    </code>
-
-
-    </div>
-
-    
-    
-   
-  </body> <!-- End Main Content -->
-
-</html> <!-- Close -->
+  </main>
+  </body>
+</html>

@@ -1,40 +1,38 @@
-/* Let's Style in CSS */
-button{
-    align-items:center;
-    justify-content: center;
-    padding: 1rem;
-    border-radius:50px;
-    background-color:rgb(255, 212, 212);
-    border: 2px solid rgb(255, 122, 122);
-    font-family: monospace
+/* STYLE SECTIONING TAGS */
+body {
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin: 2em;
 }
 
-button:hover{
-    transform: translateY(-2px);
-    box-shadow: 1px 1px 2px 2px rgb(255, 127, 127) ;
+/* STYLE TEXT */
+h1 {
+  font-style: italic;
+  color: #0d9c90;
 }
 
-.button{
-    display: block;
-    text-align:center;
+h2 {
+  margin-top: 2em; 
 }
 
-
-
-
-a{
-    text-decoration:none;
-    color:black;
+/* STYLE FLEX CONTAINER */
+.question {
+  display: flex;
+  /* uncomment the next line to center the questions and answers */
+  /* justify-content: center; */
+  margin-top: 2em;
+}
+  
+/* STYLE FLEX ITEM */
+.answer-choice {
+  margin: 5px;
 }
 
-#option{
-    font-size:14px;
+/* STYLE IMAGES */
+.answer-choice img {
+  height: 10em;
 }
 
-.topdiv{
-    padding:1rem;
-    display:flex;
-    margin:0;
-    font-size:24px;
-    background-color:rgb(198, 209, 209)marine
+/* STYLE BUTTON */
+button { 
+  margin-top: 5px;
 }
