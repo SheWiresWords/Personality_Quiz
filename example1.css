@@ -7,7 +7,6 @@ button{
     background-color:rgb(255, 212, 212);
     border: 2px solid rgb(255, 122, 122);
     font-family: monospace
-    
 }
 
 button:hover{
@@ -23,11 +22,5 @@ button:hover{
 a{
     text-decoration:none;
     color:black;
-}
-
-.code{
-    background-color:gray;
-    border-radius:25px;
-    padding:1rem;
 }
 
