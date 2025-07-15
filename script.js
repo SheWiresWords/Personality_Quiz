@@ -15,26 +15,47 @@ var q2a2 = document.getElementById("q2a2");
 var q3a1 = document.getElementById("q3a1");
 var q3a2 = document.getElementById("q3a2");
 
-q1a1.addEventListener("click", java);
-q1a2.addEventListener("click", python);
+//modified event listners to change the background color
+q1a1.addEventListener("click", function(){
+    java();
+    q1a1.style.backgroundColor = "yellowgreen";
+});
+q1a2.addEventListener("click", function(){
+    python();
+    q1a2.style.backgroundColor = "yellowgreen";
+});
 
-q2a1.addEventListener("click", java);
-q2a2.addEventListener("click", python);
 
-q3a1.addEventListener("click", python);
-q3a2.addEventListener("click", java);
+q2a1.addEventListener("click", function(){
+    java();
+    q2a1.style.backgroundColor = "yellowgreen";
+});
+q2a2.addEventListener("click", function(){
+    python();
+    q2a2.style.backgroundColor = "yellowgreen";
+});
+
+
+q3a1.addEventListener("click", function(){
+    python();
+    q3a1.style.backgroundColor = "yellowgreen";
+});
+
+
+q3a2.addEventListener("click", function(){
+    java();
+    q3a2.style.backgroundColor = "yellowgreen";
+});
+
 
 function java(){
    javaScore++;
    counter++;
-  
   if(counter == 3){
      console.log("Quiz over");
      updateResult();
   }
 }
-
-
 
 function python(){
    pythonScore++;
@@ -62,6 +83,15 @@ function resetFunction(){
    pythonScore = 0;
    javaScore = 0;
    counter = 0;
+   //reset all button colors
+   q1a1.style.backgroundColor = "";
+   q1a2.style.backgroundColor = "";
+   q2a1.style.backgroundColor = "";
+   q2a2.style.backgroundColor = "";
+   q3a1.style.backgroundColor = "";
+   q3a2.style.backgroundColor = "";
+
+   console.log("Quiz reset");
 }
 
 /* Document is a DOM Object 
