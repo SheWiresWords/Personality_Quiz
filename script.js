@@ -1,8 +1,9 @@
 var pythonScore = 0;
 var javaScore = 0;
 var counter=0;
-var result = document.getElementId("reset")
-
+var result = document.getElementById("result");
+var button = document.getElementById("restart");
+button.addEventListener("click", resetFunction);
 
 //buttons
 var q1a1 = document.getElementById("q1a1");
@@ -25,34 +26,42 @@ q3a2.addEventListener("click", java);
 
 function java(){
    javaScore++;
-   questionCount++;
+   counter++;
+  
+  if(counter == 3){
+     console.log("Quiz over");
+     updateResult();
+  }
 }
 
-if(questionCount == 3){
-   console.log("Quiz over");
-   updateResult();
-}
+
 
 function python(){
    pythonScore++;
-   questionCount++;
-}
-
-if(questionCount == 3){
-   console.log("the quiz is done");
-   updateResult();
+   counter++;
+  if(counter == 3){
+     console.log("the quiz is done");
+     updateResult();
+  }
 }
 
 
 function updateResult() {
    if(pythonScore >= 2){
       console.log("You are a Python person!");
-      result.innerHTML("You are a Python person!")
+      result.innerHTML = "You are a Python person!";
    }
    else{
       console.log("You are a Java person!");
-      result.innerHTML("You are a Java person!")
+      result.innerHTML = "You are a Java person!";
    }
+}
+
+function resetFunction(){
+   result.innerHTML = "Your result is...";
+   pythonScore = 0;
+   javaScore = 0;
+   counter = 0;
 }
 
 /* Document is a DOM Object 
