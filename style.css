@@ -39,6 +39,7 @@ body {
 }
 
 
+
 .wave:nth-of-type(2) {
     bottom: -1.25em;
     animation: wave 18s linear reverse infinite;
