@@ -1,6 +1,6 @@
 /* STYLE SECTIONING TAGS */
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+  font-family:'Courier New', Courier, monospace;
   margin: 0;
   overflow: auto;
   background: linear-gradient(315deg, rgba(101,0,94,1) 3%, rgba(60,132,206,1) 38%, rgba(48,238,226,1) 68%, rgba(255,25,25,1) 98%);
@@ -82,6 +82,17 @@ h1 {
   padding-top:0;
   margin-top:0;
   text-align:center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h3{
+  font-style: normal;
+  color: #f200ff;
+  padding:1rem;
+  padding-bottom:0;
+  padding-top:0;
+  margin-top:0;
+  text-align:center;
 }
 
 
@@ -93,8 +104,8 @@ h2 {
   margin-right:20%;
   margin-left:20%;
   border-radius:25px;
-  transition:ease .5s;
-  border: solid 2px rgba(255, 255, 255, 0.3);
+  transition:ease 1s;
+  border: solid 1px rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(2px);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
@@ -116,10 +127,9 @@ header{
   align-items:center;
   margin-right:5%;
   margin-left:5%;
-  margin-top:2rem;
+  margin-top:1rem;
   border-radius:25px;
-  backdrop-filter:blur(2px);
-  border: solid 2px rgba(255, 255, 255, 0.3);
+  border: solid 1px rgba(255, 255, 255, 0.3);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   transition: ease-in-out 0.8s;
 
@@ -127,8 +137,7 @@ header{
 
 header:hover{
   background-color:rgba(184, 255, 250, 0.15);
-  backdrop-filter:blur(3px);
-  border: solid 2px rgba(255, 255, 255, 0.4);
+  border: solid 1px rgba(255, 255, 255, 0.4);
   scale:100.5%;
 }
 
@@ -142,10 +151,9 @@ header:hover{
   margin-left:5%;
   padding:1rem; */
   border-radius:25px;
-  border: solid 2px rgba(255, 255, 255, 0.3);
+  border: solid 1px rgba(255, 255, 255, 0.3);
   margin-bottom:5rem;
   transition: ease-in-out 0.8s;
-  backdrop-filter: blur(3px);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
@@ -232,17 +240,6 @@ header:hover{
   max-width:100%;
 }
 
-.vertline{
-  margin: auto;
-  display:inline;
-  border: solid 1px rgb(255 255 255 / 25%);
-  height:18rem;
-  align-content:center;
-  align-items:center;
-  text-align:center;
-  border-radius:50px;
-}
-
 /* STYLE IMAGES */
 img {
   height: 200px;
@@ -261,7 +258,7 @@ img {
 img:hover{
   transform: translateY(-2px);
   scale: 95%;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* STYLE BUTTON */
@@ -273,8 +270,7 @@ button {
   padding:.5rem;
   background-color:rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(3px);
-  border: solid 2px rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border: solid 1px rgba(255, 255, 255, 0.3);
   color: #333;
   font-weight: 500;
   transition-duration:.2s;
@@ -283,18 +279,16 @@ button {
 }
 
 button:hover{
-  transform: translateY(-3px);
   background-color:rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(4px);
-  border: solid 2px rgba(255, 255, 255, 0.4);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  border: solid 1px rgba(255, 255, 255, 0.4);
 }
 
 #restart{
   padding:1rem;
-  margin:0;
+  margin:auto;
   border-radius:50px;
-  margin-left:5rem;
+  margin-top:5rem;
   margin-bottom:5rem;
   background-color:rgba(142, 251, 255, 0.2);
   backdrop-filter: blur(3px);

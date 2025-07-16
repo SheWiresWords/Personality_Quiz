@@ -2,7 +2,8 @@ var nyanCat = 0;
 var grumpyCat = 0;
 var popCat = 0;
 var maxwellCat = 0;
-
+var imgresult = document.getElementsByClassName("resultimg");
+imgresult.src = "assets/glass-card.svg";
 var counter = 0;
 var answeredQuestions = new Set(); // Track which questions have been answered
 var result = document.getElementById("result");
@@ -164,18 +165,23 @@ function updateResult() {
 
    if (nyanCat === maxScore) {
       console.log("You are Nyan Cat");
-
       result.innerHTML = "You are Nyan Cat";
+      imgresult.src = "assets/Nyan_cat,jpg.webp";
 
    } else if (grumpyCat === maxScore) {
       console.log("You are Grumpy Cat!");
       result.innerHTML = "You are Grumpy Cat!";
+      imgresult.src = "assets/proxy-image (4).jpg";
+
    } else if (popCat === maxScore) {
       console.log("You are Pop Cat");
       result.innerHTML = "You are Pop Cat";
+      imgresult.src = "assets/PopCat.gif";
    } else {
       console.log("You are Maxwell");
       result.innerHTML = "You are Maxwell";
+      imgresult.src = "assets/Maxwell.jpg";
+
    }
 }
 
@@ -187,6 +193,8 @@ function resetFunction(){
    maxwellCat = 0;
    counter = 0;
    answeredQuestions.clear();
+   imgresult.src = "assets/glass-card.svg";
+
 
    // Reset all image styles
    const images = document.querySelectorAll(".answer-choice img");
