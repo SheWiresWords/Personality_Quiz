@@ -211,4 +211,22 @@ function resetFunction(){
 /* Document is a DOM Object 
    Get element by id is a method
    element.interHTML accesses the property innerHTML
-*/
+ahhh
+im acctually going
+to start
+taking
+notes
+in here
+what the freak
+   */
+
+ahh
+
+bro dawg
+i
+am
+BATMAN
+yes
+lol
+haha
+ALFRED!
