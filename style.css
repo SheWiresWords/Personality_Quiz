@@ -1,4 +1,4 @@
-/* STYLE SECTIONING TAGS */
+/* style the main body */
 body {
   font-family: monospace;
   margin: 0;
@@ -12,25 +12,29 @@ body {
   place-content: center;
 }
 
+/* deal with the background (learned from online resources how to make this) */
 @keyframes gradient {
     0% {
         background-position: 0% 0%;
     }
+  
     50% {
         background-position: 100% 100%;
     }
+  
     100% {
         background-position: 0% 0%;
     }
 }
 
+/* style the wave class for the background */
 .wave {
-    background: rgb(255 255 255 / 25%);
+    background: rgb(255 255 255 / 25%); /* Figured out how to do transparency with the 25%*/
     border-radius: 1000% 1000% 0 0;
     position: fixed;
     width: 200%;
     height: 12em;
-    animation: wave 10s -3s linear infinite;
+    animation: wave 10s -3s linear infinite; /* Learning this made my vision so much easier */
     transform: translate3d(0, 0, 0);
     opacity: 0.8;
     bottom: 0;
@@ -38,13 +42,13 @@ body {
     z-index: -1;
 }
 
-.wave:nth-of-type(2) {
+.wave:nth-of-type(2){
     bottom: -1.25em;
     animation: wave 18s linear reverse infinite;
     opacity: 0.8;
 }
 
-.wave:nth-of-type(3) {
+.wave:nth-of-type(3){
     bottom: -2.5em;
     animation: wave 20s -1s reverse infinite;
     opacity: 0.9;
@@ -72,7 +76,7 @@ body {
     }
 }
 
-/* STYLE TEXT */
+/* style text an animations */
 h1 {
   font-style: normal;
   color: #78fff4;
@@ -135,7 +139,7 @@ p:hover{
   transform:translateY(-1px);
 }
 
-/* STYLE FLEX CONTAINER */
+/* style sections, divs, containers */
 header{
   background-color:rgb(255 255 255 / 20%);
   padding:1.5rem;
@@ -180,7 +184,7 @@ header:hover{
 
 .question[data-animated="true"] {
   overflow: hidden;
-  -webkit-mask: linear-gradient(
+  -webkit-mask: linear-gradient( /* I learned this new trick!*/
     90deg,
     transparent,
     white 20%,
@@ -190,7 +194,7 @@ header:hover{
   mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 }
 
-.question[data-animated="true"] .scroller_inner {
+.question[data-animated="true"] .scroller_inner { /* I also learned how to do this for this project*/
   width: max-content;
   flex-wrap: nowrap;
   animation: scroll var(--_animation-duration, 40s)
@@ -236,7 +240,6 @@ header:hover{
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
-/* STYLE FLEX ITEM */
 .answer-choice {
   margin: auto;
   display:block;
@@ -246,7 +249,7 @@ header:hover{
   max-width:100%;
 }
 
-/* STYLE IMAGES */
+/* style images */
 img {
   height: 200px;
   width:200px;
@@ -267,7 +270,7 @@ img:hover{
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* STYLE BUTTON */
+/* style labels (that I accidentally named buttons) */
 button { 
   margin:auto;
   display:block;
@@ -290,6 +293,7 @@ button:hover{
   border: solid 1px rgba(255, 255, 255, 0.4);
 }
 
+/* style results */
 .resultdiv{
   display:flex;
   background-color:rgb(255 255 255 / 20%);
