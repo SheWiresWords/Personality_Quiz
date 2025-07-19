@@ -1,38 +1,30 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<title>What Cat Meme Are You?</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<!-- import the webpage's stylesheet -->
 	<link rel="stylesheet" href="/style.css">
-
-	<!-- import the webpage's javascript file -->
 	<script src="/script.js" defer>
-
 	</script>
 </head>
 
+	<!-- Start Code -->
 <body>
+	<!-- Background -->
   <div>
     <div class="wave">
-
     </div>
     <div class="wave">
-      
     </div>
     <div class="wave">
-      
     </div>
   </div>
-
+	<!-- Quiz Part -->
 	<header>
 		<h1>What Cat Meme Are You?</h1>
-		<h3>Welcome to my intergalatic wave cafe!</h3> 
+		<h3>Welcome to my intergalactic wave cafe!</h3> 
     <p> <br><br> <b>Instructions:</b> <br>
       1. Select one item from each row. <br>
       2. Click on the image to select the option, not the label. <br>
@@ -41,11 +33,10 @@
       5. Drop a vote if you liked my quiz and retake! 
     </h4>
 	</header>
-
 	<main>
-
-		<h2>1. Let's get started with a drink</h2>
-		<div class="question" id="q1" data-direction="right" data-speed="medium">
+		
+    <h2>1. Let's get started with a drink</h2>
+    <div class="question" id="q1" data-direction="right" data-speed="medium">
       <div class="scroller_inner">
         <div class="answer-choice">
             <img src="assets/drink1.png" alt="Strawberry Moon Sparkle">
@@ -76,7 +67,6 @@
           <img src="assets/drink5.png" alt="Starry Kiwi Berry Ade">
           <button id="q2a2">Starry Kiwi Berry Ade</button>
         </div>
-
         
         <div class="answer-choice">
           <img src="assets/drink6.png" alt="Cucumber Lime Sip">
@@ -115,7 +105,7 @@
       </div>
     </div> 
 
-    <h2>4. Nice choice! But we're hungry... Time to order food</h2>
+    <h2>4. Nice choice! But you're hungry... Time to order food!</h2>
     <div class="question" id="q4" data-direction="left" data-speed="medium">
       <div class="scroller_inner">
         <div class="answer-choice">
@@ -139,6 +129,7 @@
         </div>
       </div>
     </div>
+		
     <h2>Remember, there's always room for dessert!</h2>
     <div class="question" id="q5" data-direction="right" data-speed="medium">
       <div class="scroller_inner">
@@ -169,15 +160,16 @@
       </div>
     </div>
 
+		<!-- Result Part -->
     
     <h2 id="result">Your result is...
     </h2>
 
-    <div class="resultdiv">
+    <div class="resultdiv"> <!-- Picture for result -->
         <img id="resultimg" src="assets/glass-card.svg">
     </div>
 
-    
+    <!-- Do again button -->
     <button id="restart"> Retake </button>
     
     
