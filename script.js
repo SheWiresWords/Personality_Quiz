@@ -13,17 +13,15 @@ const scrollers = document.querySelectorAll(".question");
 
 function addAnimation() {
   scrollers.forEach((scroller) => {
-    // add data-animated="true" to every `.question` on the page
     scroller.setAttribute("data-animated", true);
-
-    // Make an array from the elements within `.scroller_inner`
     const scrollerInner = scroller.querySelector(".scroller_inner");
     if (scrollerInner) {
       const scrollerContent = Array.from(scrollerInner.children);
 
-      // For each item in the array, clone it
-      // add aria-hidden to it
-      // add it into the `.scroller_inner`
+      //Notes from learning how to do this:
+      //clone each item in array
+      //add aria-hidden to it
+      //add it to `scroller_inner
       scrollerContent.forEach((item) => {
         const duplicatedItem = item.cloneNode(true);
         duplicatedItem.setAttribute("aria-hidden", true);
@@ -33,12 +31,6 @@ function addAnimation() {
   });
 }
 
-// If a user hasn't opted in for reduced motion, then we add the animation
-if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  addAnimation();
-}
-
-// Get all images and add click event listeners
 document.addEventListener("DOMContentLoaded", function() {
   const images = document.querySelectorAll(".answer-choice img");
 
@@ -47,19 +39,16 @@ document.addEventListener("DOMContentLoaded", function() {
       const questionDiv = img.closest(".question");
       const questionId = questionDiv.id;
 
-      // Check if this question has already been answered
+      //cgeck if this question already been answered
       if (answeredQuestions.has(questionId)) {
-        return; // Exit early if already answered
+        return; 
       }
-
-      // Mark this question as answered
       answeredQuestions.add(questionId);
 
-      // Add visual feedback to the clicked image
+      //make green if answered
       img.style.border = "3px solid yellowgreen";
       img.style.borderRadius = "15px";
-
-      // Disable other images in the same question
+      
       const otherImages = questionDiv.querySelectorAll(".answer-choice img");
       otherImages.forEach(function(otherImg) {
         if (otherImg !== img) {
@@ -68,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
       });
 
-      // Determine which answer was clicked and update scores
+      //quiz logic
       if (questionId === "q1") {
         if (img.alt.includes("Moon")) {
           grump();
@@ -196,7 +185,7 @@ function resetFunction(){
    imgresult.src = "assets/glass-card.svg";
 
 
-   // Reset all image styles
+   //reset img stuff
    const images = document.querySelectorAll(".answer-choice img");
    images.forEach(function(img) {
      img.style.border = "";
