@@ -32,6 +32,7 @@ function addAnimation() {
 }
 
 document.addEventListener("DOMContentLoaded", function(){
+  addAnimation();
   const images = document.querySelectorAll(".answer-choice img");
 
   images.forEach(function(img){
@@ -168,7 +169,7 @@ function maxwell(){
   }
 }
 
-function updateResult() {
+function updateResult(){
    const maxScore = Math.max(nyanCat, grumpyCat, popCat, maxwellCat);
 
    if(nyanCat === maxScore){
