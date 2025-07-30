@@ -192,34 +192,7 @@ header:hover{
     transparent
   );
   mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
-  /**/position: relative;
 }
-.question[data-animated="true"]::before,
-.question[data-animated="true"]::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 50px;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.question[data-animated="true"]::before {
-  left: 0;
-  background: linear-gradient(to right, 
-    rgba(255, 255, 255, 1) 0%, 
-    rgba(255, 255, 255, 0.8) 20%, 
-    rgba(255, 255, 255, 0) 100%);
-}
-
-.question[data-animated="true"]::after {
-  right: 0;
-  background: linear-gradient(to left, 
-    rgba(255, 255, 255, 1) 0%, 
-    rgba(255, 255, 255, 0.8) 20%, 
-    rgba(255, 255, 255, 0) 100%);
-}/**/
 
 .question[data-animated="true"] .scroller_inner {/* I also learned how to do this for this project*/
   width: max-content;
