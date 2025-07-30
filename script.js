@@ -5,7 +5,7 @@ var maxwellCat = 0;
 const imgresult = document.getElementById("resultimg");
 imgresult.src = "assets/glass-card.svg";
 var counter = 0;
-var answeredQuestions = new Set(); // Track which questions have been answered
+var answeredQuestions = new Set(); //track which questions have been answered
 var result = document.getElementById("result");
 var button = document.getElementById("restart");
 button.addEventListener("click", resetFunction);
@@ -19,7 +19,7 @@ function addAnimation() {
       const scrollerContent = Array.from(scrollerInner.children);
 
       //Notes from learning how to do this:
-      //clone each item in array
+      //clone each item in the array
       //add aria-hidden to it
       //add it to `scroller_inner
       scrollerContent.forEach((item) => {
@@ -31,16 +31,16 @@ function addAnimation() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function(){
   const images = document.querySelectorAll(".answer-choice img");
 
-  images.forEach(function(img) {
-    img.addEventListener("click", function() {
+  images.forEach(function(img){
+    img.addEventListener("click", function(){
       const questionDiv = img.closest(".question");
       const questionId = questionDiv.id;
 
-      //cgeck if this question already been answered
-      if (answeredQuestions.has(questionId)) {
+      //check if this question has already been answered
+      if(answeredQuestions.has(questionId)){
         return; 
       }
       answeredQuestions.add(questionId);
@@ -51,61 +51,80 @@ document.addEventListener("DOMContentLoaded", function() {
       
       const otherImages = questionDiv.querySelectorAll(".answer-choice img");
       otherImages.forEach(function(otherImg) {
-        if (otherImg !== img) {
+        if(otherImg!== img){
           otherImg.style.opacity = "0.5";
           otherImg.style.pointerEvents = "none";
         }
       });
 
       //quiz logic
-      if (questionId === "q1") {
-        if (img.alt.includes("Moon")) {
+      if(questionId === "q1"){
+        if(img.alt.includes("Moon")){
           grump();
-        } else if (img.alt.includes("Cloud")) {
+        } 
+        else if(img.alt.includes("Cloud")){
           nyan();
-        } else if (img.alt.includes("Apple")) {
+        } 
+        else if(img.alt.includes("Apple")){
           popcat();
         }
-      } else if (questionId === "q2") {
-        if (img.alt.includes("Refresher")) {
+      } 
+      else if(questionId === "q2"){
+        if(img.alt.includes("Refresher")){
           nyan();
-        } else if (img.alt.includes("Kiwi")) {
+        } 
+        else if(img.alt.includes("Kiwi")){
           maxwell();
-        } else if (img.alt.includes("Cucumber")) {
+        } 
+        else if(img.alt.includes("Cucumber")){
           grump();
-        } else if (img.alt.includes("Cherry")) {
+        } 
+        else if(img.alt.includes("Cherry")){
           popcat();
         }
-      } else if (questionId === "q3") {
-        if (img.alt.includes("Sun")) {
+      } 
+      else if(questionId === "q3"){
+        if(img.alt.includes("Sun")){
           maxwell();
-        } else if (img.alt.includes("Cream")) {
+        } 
+        else if(img.alt.includes("Cream")){
           nyan();
-        } else if (img.alt.includes("Grapefruit")) {
+        } 
+        else if(img.alt.includes("Grapefruit")){
           popcat();
-        } else if (img.alt.includes("Boba")) {
+        }
+        else if (img.alt.includes("Boba")){
           grump();
         }
-      } else if (questionId === "q4") {
-        if (img.alt.includes("Chicken")) {
+      } 
+      else if(questionId === "q4"){
+        if(img.alt.includes("Chicken")){
           nyan();
-        } else if (img.alt.includes("Sushi")) {
+        } 
+        else if (img.alt.includes("Sushi")){
           popcat();
-        } else if (img.alt.includes("Bao")) {
+        } 
+        else if (img.alt.includes("Bao")){
           grump();
-        } else if (img.alt.includes("Ramen")) {
+        } 
+        else if (img.alt.includes("Ramen")){
           maxwell();
         }
-      } else if (questionId === "q5") {
-        if (img.alt.includes("Sundae")) {
+      } 
+      else if(questionId === "q5"){
+        if(img.alt.includes("Sundae")){
           nyan();
-        } else if (img.alt.includes("Jelly")) {
+        }
+        else if(img.alt.includes("Jelly")){
           maxwell();
-        } else if (img.alt.includes("Parfait")) {
+        } 
+        else if(img.alt.includes("Parfait")){
           grump();
-        } else if (img.alt.includes("Shaved")) {
+        } 
+        else if(img.alt.includes("Shaved")){
           popcat();
-        } else if (img.alt.includes("Shining")) {
+        } 
+        else if(img.alt.includes("Shining")){
           maxwell();
         }
       } 
@@ -152,25 +171,27 @@ function maxwell(){
 function updateResult() {
    const maxScore = Math.max(nyanCat, grumpyCat, popCat, maxwellCat);
 
-   if (nyanCat === maxScore) {
+   if(nyanCat === maxScore){
       console.log("You are Nyan Cat");
       result.innerHTML = "You are Nyan Cat";
       imgresult.src = "assets/Nyan_cat,jpg.webp";
 
-   } else if (grumpyCat === maxScore) {
+   } 
+   else if(grumpyCat === maxScore){
       console.log("You are Grumpy Cat!");
       result.innerHTML = "You are Grumpy Cat!";
       imgresult.src = "assets/proxy-image (4).jpg";
 
-   } else if (popCat === maxScore) {
+   } 
+   else if(popCat === maxScore){
       console.log("You are Pop Cat");
       result.innerHTML = "You are Pop Cat";
       imgresult.src = "assets/PopCat.gif";
-   } else {
+   } 
+   else{
       console.log("You are Maxwell");
       result.innerHTML = "You are Maxwell";
       imgresult.src = "assets/Maxwell.jpg";
-
    }
 }
 
