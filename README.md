@@ -23,3 +23,5 @@ with Javascript, I decided to make the cafe experience into a personality quiz.
 - Watched additional tutorial videos for CSS masking and animation
 - Learn JavaScript through documentation and tutorial videos
 - Struggled with JavaScript and CSS Animations, but was able to continue watching videos to figure out my quiz
+
+[![Athena Award Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Faward.athena.hackclub.com%2Fapi%2Fbadge)](https://award.athena.hackclub.com?utm_source=readme)
